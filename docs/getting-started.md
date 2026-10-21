@@ -45,6 +45,8 @@ If you use docker with sudo or want to make `docker-rollout` available for all u
 
 ## Prepare your service
 
+_docker rollout_ detects Compose with `docker compose version` or `docker-compose version`. Bare usage can return an error even when Compose is installed.
+
 _docker rollout_ requires a Docker Compose file to work. Traffic to your service must be handled by a reverse proxy with automatic service discovery like [Traefik](https://github.com/traefik/traefik) or [nginx-proxy](https://github.com/nginx-proxy/nginx-proxy). Here is a sample Compose file with Traefik reverse proxy and a service:
 
 ```yaml
