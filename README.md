@@ -25,6 +25,7 @@ Simply replace `docker compose up -d <service>` with `docker rollout <service>` 
 
 - ⏳ Zero downtime deployment for Docker Compose services
 - 🐳 Works with Docker Compose and `docker-compose`
+  Availability uses each tool’s `version` command, including versions that return an error for bare usage.
 - ❤️ Supports Docker healthchecks out of the box
 
 ## Installation

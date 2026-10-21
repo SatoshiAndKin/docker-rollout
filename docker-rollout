@@ -33,10 +33,10 @@ while [ $# -gt 0 ]; do
 done
 
 # Check if compose v2 is available
-if docker compose >/dev/null 2>&1; then
+if docker compose version >/dev/null 2>&1; then
   # shellcheck disable=SC2086 # DOCKER_ARGS must be unquoted to allow multiple arguments
   COMPOSE_COMMAND="docker $DOCKER_ARGS compose"
-elif docker-compose >/dev/null 2>&1; then
+elif docker-compose version >/dev/null 2>&1; then
   COMPOSE_COMMAND="docker-compose"
 else
   echo "docker compose or docker-compose is required"
